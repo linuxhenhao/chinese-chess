@@ -1,0 +1,23 @@
+{
+  "name": "中国象棋 - 人机对战",
+  "short_name": "中国象棋",
+  "description": "中国象棋人机对战，支持回放/续下/存档",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f4f4",
+  "theme_color": "#c0392b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

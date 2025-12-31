@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>中国象棋 - 人机对战</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#c0392b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>中国象棋 - 人机对战</h1>
+    <div class="control-panel">
+      <label>
+        难度：
+        <select id="difficulty">
+          <option value="low">低</option>
+          <option value="medium" selected>中</option>
+          <option value="high">高</option>
+        </select>
+      </label>
+      <button id="restart-btn">重新开始</button>
+      <button id="undo-btn">悔棋</button>
+      <div class="replay-controls">
+        <button id="replay-btn">回放</button>
+        <button id="first-btn" disabled>到开局</button>
+        <button id="prev-btn" disabled>上一步</button>
+        <button id="next-btn" disabled>下一步</button>
+        <button id="last-btn" disabled>到最新</button>
+        <label class="jump">
+          跳
+          <input id="jump-step" type="number" min="1" value="5" />
+          步
+        </label>
+        <button id="jump-back-btn" disabled>◀</button>
+        <button id="jump-forward-btn" disabled>▶</button>
+        <button id="resume-btn" style="display: none;">从此开始下</button>
+      </div>
+      <div class="file-controls">
+        <button id="save-btn">保存记录</button>
+        <button id="load-btn">加载记录</button>
+        <input type="file" id="file-input" style="display: none;" accept=".json" />
+      </div>
+      <span id="status-text"></span>
+    </div>
+    <div id="board" class="board"></div>
+    <div class="tips">
+      <p>红方：玩家；黑方：机器人。</p>
+      <p>点击红棋，然后点击目标格完成走子。</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
